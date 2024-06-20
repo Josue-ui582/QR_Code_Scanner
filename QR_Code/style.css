@@ -21,7 +21,7 @@ body .title{
 }
 
 .wrapper {
-    height: 260px;
+    height: 320px;
     background-color: white;
     max-width: 410px;
     border-radius: 7px;
@@ -30,7 +30,7 @@ body .title{
 }
 
 .wrapper.active {
-    height: 500px;
+    height: 580px;
     
 }
 
@@ -57,10 +57,19 @@ header p {
     border-radius: 5px;
 }
 
-.form input {
+.form .texts {
+    background-color: none;
     border: 1px solid #999;
     padding: 0 17px;
     font-size: 18px;
+    margin: 5px 0;
+}
+
+.files{
+    background-color: none;
+    padding: 0 17px;
+    font-size: 18px;
+    margin: 5px 0;
 }
 
 .form button {
