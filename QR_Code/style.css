@@ -6,22 +6,23 @@
     font-family: Poppins, sans-serif;
 }
 
-body{
+.container {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
+    min-height: 150vh;
     background-color: rgba(124, 238, 241, 0.969);
 }
 
-body .title{
+.container .title{
     position: absolute;
     top: 0px;
     text-align: center;
 }
 
 .wrapper {
-    height: 320px;
+    margin-top:50px;
+    height: 430px;
     background-color: white;
     max-width: 410px;
     border-radius: 7px;
@@ -30,13 +31,35 @@ body .title{
 }
 
 .wrapper.active {
-    height: 580px;
+    height: 680px;
     
 }
 
 header h1 {
     font-size: 21px;
     font-weight: 500;
+}
+
+p.error{
+    pointer-events: none;
+    opacity: 0;
+}
+
+p.errorMessage{
+    opacity: 1;
+    color: red;
+    transition: opacity 0.5s 0.05s ease;
+}
+
+p.succes{
+    opacity: 0;
+    pointer-events: none;
+}
+
+p.succesMessage{
+    opacity: 1;
+    color: green;
+    transition: opacity 0.5s 0.05s ease;
 }
 
 header p {
@@ -95,4 +118,24 @@ header p {
     opacity: 1;
     pointer-events: auto;
     transition: opacity 0.5s 0.05s ease;
+}
+
+.container small{
+    position: absolute;
+    bottom: -350px;
+    text-align: center;
+}
+
+.container small span {
+    color: rgb(255, 255, 255);
+}
+
+@media(max-width: 750px) {
+    .wrapper{
+        margin-top: 0;
+        height: calc(430px + 50px);
+    }
+    .wrapper.active{
+        height: calc(680px + 20px);
+    }
 }

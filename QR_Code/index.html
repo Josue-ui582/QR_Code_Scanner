@@ -4,27 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>QR Code Generator</title>
+    <title>QR Wave App</title>
 </head>
 <body>
-    <h1 class="title">Generate QR Code quickly and flexibly</h1>
-    <div class="wrapper">
-        <header>
-            <h1>QR Code Generator</h1>
-            <p>Paste a URL or enter text to create QR code</p>
-        </header>
-        <div class="form">
-            <div class="inputOptions">
-                <input class="texts" type="text" placeholder="Enter text or URL...">
-                <input class="files" type="file" placeholder="select file here" accept="image/*,video/*">
+    <div class="container">
+        <h1 class="title">Generate QR Code quickly and flexibly</h1>
+        <div class="wrapper">
+            <header>
+                <p class="error">Please enter Text, URL or select file to generate QR code 😎</p>
+                <p class="succes">Great ! Your QR code has been good generated 🎉</p>
+                <h1>QR Code Generator</h1>
+                <p>Paste a URL or enter text to create QR code</p>
+            </header>
+            <div class="form">
+                <div class="inputOptions">
+                    <input class="texts" type="text" placeholder="Enter text or URL...">
+                    <input class="files" type="file" placeholder="select file here" accept="image/*,video/*">
+                </div>
+                <button>Generate QR Code</button>
             </div>
-            <button>Generate QR Code</button>
+            <div class="QR-Code">
+                <img src="" alt="QR-Code">
+            </div>
         </div>
-        <div class="QR-Code">
-            <img src="" alt="QR-Code">
-        </div>
+        <small>Powered by <span>Joshua_Developer</span> &copy 2024, all rigth received</small>
     </div>
-
     <script src="index.js"></script>
 </body>
 </html>
