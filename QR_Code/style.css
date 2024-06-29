@@ -6,23 +6,45 @@
     font-family: Poppins, sans-serif;
 }
 
+body{
+    background-color: rgba(124, 238, 241, 0.969);
+    height: 130vh;
+}
+
+.info_txt{
+    font-size: 18px;
+    display: none;
+    text-align: center;
+    margin-bottom: 18px;
+    margin-top: 15px;
+}
+
+.info-txt{
+    font-size: 18px;
+    display: none;
+    text-align: center;
+    margin-bottom: 18px;
+    margin-top: 15px;
+}
+
 .container {
     display: flex;
+    margin-top: 200px;
+    margin-bottom: 200px;
     align-items: center;
     justify-content: center;
-    min-height: 150vh;
+    gap: 90px;
     background-color: rgba(124, 238, 241, 0.969);
 }
 
-.container .title{
-    position: absolute;
-    top: 0px;
+
+
+.title{
     text-align: center;
 }
 
 .wrapper {
-    margin-top:50px;
-    height: 430px;
+    height: 100%;
     background-color: white;
     max-width: 410px;
     border-radius: 7px;
@@ -38,28 +60,6 @@
 header h1 {
     font-size: 21px;
     font-weight: 500;
-}
-
-p.error{
-    pointer-events: none;
-    opacity: 0;
-}
-
-p.errorMessage{
-    opacity: 1;
-    color: red;
-    transition: opacity 0.5s 0.05s ease;
-}
-
-p.succes{
-    opacity: 0;
-    pointer-events: none;
-}
-
-p.succesMessage{
-    opacity: 1;
-    color: green;
-    transition: opacity 0.5s 0.05s ease;
 }
 
 header p {
@@ -120,16 +120,6 @@ header p {
     transition: opacity 0.5s 0.05s ease;
 }
 
-.container small{
-    position: absolute;
-    bottom: -350px;
-    text-align: center;
-}
-
-.container small span {
-    color: rgb(255, 255, 255);
-}
-
 @media(max-width: 750px) {
     .wrapper{
         margin-top: 0;
@@ -138,4 +128,48 @@ header p {
     .wrapper.active{
         height: calc(680px + 20px);
     }
+}
+
+@media(max-width: 700px) {
+    .container{
+        margin-top: 150px;
+        margin-bottom: 50px;
+    }
+}
+@media(min-width: 700px){
+    .container{
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+}
+
+.other_option{
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.other_option :where(button){
+    display: none;
+    cursor: pointer;
+    width: 100%;
+    background-color: rgba(124, 238, 241, 0.969);
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+    padding: 10px;
+}
+
+.other_option :where(button):hover{
+    background-color: white;
+    color: black;
+    transition: ease .6s;
+}
+
+footer{
+    text-align: center;
+}
+
+footer small span {
+    color: rgb(255, 255, 255);
 }
